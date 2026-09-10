@@ -33,7 +33,7 @@ Once the server is actively running in your terminal, open any web browser and u
 ![Screenshot of the /about route in browser](documentation/Picture2.png)
 
 ### 404 Error Page
-![Screenshot of any unknown route showing the 404 error page](documentation/404.png)
+![Screenshot of any unknown route showing the 404 error page](documentation/Picture3.png)
 
 ### Terminal Running Server
 ![Screenshot of the terminal running the server](documentation/image.png)
