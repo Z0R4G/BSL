@@ -9,9 +9,9 @@ Follow these steps to get the server up and running on your local machine:
 1. **Install BSL:** Ensure you have the Bonezegei Scripting Language (BSL) interpreter installed on your system.
 2. **Clone the Repository:** Clone this project repository to your local machine and navigate into the root project directory in your terminal.
 3. **Verify Dependencies:** Ensure the socket library (`lib/socket.bzg`) is present in the `lib/` directory so the server script can include it.
-4. **Run the Server:** Open your terminal and execute the server script using the BSL CLI:
+4. **Run the Server:** Open your terminal and execute the server script using the CLI:
    ```bash
-   bonezegei server.bzg
+   bonezegei "file location" http.bzg
    ```
    *(Note: The terminal will display "Socket Ready" and wait for incoming connections on port 8080.)*
 
