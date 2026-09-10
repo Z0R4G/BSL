@@ -30,14 +30,14 @@ while(1) {
     
     var data = socket_read(client, 1024);
         
-    // Make sure we actually received data
+  
     if (sizeof(data) > 0) {
         
         var match = regex("/.* HTTP/1.1", data);
         var BODY = "";
         var HTTP = "";
         
-        // SAFETY CHECK: Only process if the regex actually found a valid HTTP request
+      
         if (match != null && sizeof(match) > 9) {
             var path = substr(match, 0, sizeof(match) - 9);
             print("File Requested: " + path); 
@@ -80,7 +80,7 @@ while(1) {
                      + "\r\n";
             }                          
         } else {
-            // The browser sent an empty ping or favicon request, ignore it gracefully
+           
             print("Ignored invalid or background request.");
             BODY = "";
             HTTP = "HTTP/1.1 400 Bad Request\r\nConnection: close\r\n\r\n";
@@ -89,9 +89,9 @@ while(1) {
         socket_write(client, HTTP + BODY, sizeof(HTTP + BODY));
     }
     
-    socket_close(client); // Close the connection for this specific user
-    gc();   // manual garbage collection
+    socket_close(client); 
+    gc();   
 }    
 
-// Replaced socket_cleanup() with the correct close command for the server
+
 socket_close(server);
